@@ -100,7 +100,7 @@ main {
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
-.btn {
+.btn--all {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -123,7 +123,7 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn::first-letter {
+.btn--all::first-letter {
   font-size: 2.4rem;
   display: inline-block;
   margin-right: 0.7rem;
@@ -139,12 +139,12 @@ main {
   top: 46.1rem;
 }
 
-.btn:active {
+.btn--all:active {
   transform: translate(-50%, 3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-.btn:focus {
+.btn--all:focus {
   outline: none;
 }
 
@@ -164,4 +164,29 @@ main {
 .player--winner .name {
   font-weight: 700;
   color: #c7365f;
+}
+
+.input-box{
+  margin: 50px auto;
+}
+
+.game-name{
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 2rem;
+  font-size: 10rem;
+  color:antiquewhite;
+  font-family: 'Lato', sans-serif;
+}
+
+label{
+  font-size: 2.5rem;
+}
+
+.form-control{
+  height: 50px;
+}
+
+.name-input{
+  padding-bottom: 2rem;
 }

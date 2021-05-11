@@ -15,7 +15,7 @@ const btnHold = document.querySelector('.btn--hold');
 
 const switchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0;
+    roundScore = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
     player0El.classList.toggle('player--active');
     player1El.classList.toggle('player--active');
@@ -33,6 +33,10 @@ function init(){
     scores=[0,0];
     roundScore=0;
     activePlayer=0;
+
+    document.getElementById("name--0").textContent = sessionStorage.getItem("player1");
+    document.getElementById("name--1").textContent = sessionStorage.getItem("player2");  
+
 }
 init();
 
@@ -45,7 +49,7 @@ btnRoll.addEventListener('click', function(){
 
         if(dice!==1){
             roundScore+=dice;
-            document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+            document.getElementById(`current--${activePlayer}`).textContent = roundScore;
         }
         else{
             switchPlayer();
@@ -55,7 +59,7 @@ btnRoll.addEventListener('click', function(){
 
 btnHold.addEventListener('click', function () {
     if (playing) {
-      scores[activePlayer] += currentScore;
+      scores[activePlayer] += roundScore;
       document.getElementById(`score--${activePlayer}`).textContent =
         scores[activePlayer];
   
