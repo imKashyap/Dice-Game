@@ -8,6 +8,7 @@
   - If scored 1 , the player not only get switched. But the round score for the 1 scoring player is considered 0. To avoid such scenario, a player can hold to save the current round score.
   - The first player to reach a score of 100 wins the match
 - The app is developed in HTML, CSS & Javascript. Bootstrap is used as a framework for CSS.
+- - This porject is a part of Javascript course on Udemy by *Jonas Schmedtmann*.
 - Try the game [here.](https://imkashyap.github.io/Dice-Game/)
   
 
